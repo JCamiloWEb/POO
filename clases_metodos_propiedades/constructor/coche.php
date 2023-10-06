@@ -15,7 +15,7 @@ class Coche{
     public $plazas;
 
     //métodos()
-    //constructor
+    //constructor : método __construct()
     public function __construct($color, $modelo, $velocidad, $marca, $plazas){//también podría pasarle parámetros al constructor
         $this->color=$color;
         $this->modelo=$modelo;
@@ -50,7 +50,7 @@ class Coche{
 
     }
 //método ayuda para ver objetos en lugar de var_dump por ejemplo 
-    public function mostrarInfo(coche $coche){ //es conveniente meter el tipado, en este caso objeto tipo coche
+    public function mostrarInfo(Coche $coche){ //es conveniente meter el tipado, en este caso objeto tipo coche
 
         
 
