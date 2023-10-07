@@ -106,6 +106,12 @@ class Persona
 //HEREDA PERSONA
 class Informatico extends Persona{
     public $lenguajes;
+    public $experienciaProg;
+
+    public function __construct(){
+        $this->lenguajes="html css js";
+        $this->experienciaProg=10;
+    }
     public function sabeLenguajes($lenguajes){
         $this->lenguajes = $lenguajes;
         return $this->lenguajes;
@@ -139,7 +145,16 @@ class Informatico extends Persona{
 
 class TecnicosRedes extends Informatico{
     public $testearRed;
-    public $experiencia;
+    public $experienciaRedes;
+
+    public function __construct(){    
+        /******
+         * Si hay un constructor en HIJO, no heredera lo del constructor del padre, para que lo haga
+         * usaremos parent::   */
+        parent::__construct();
+        $this->testearRed="experto";
+        $this->experienciaRedes=5;
+    }
     public function auditarRedes(){
         return "auditanto red";
 
