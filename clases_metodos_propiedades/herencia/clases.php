@@ -156,7 +156,7 @@ class TecnicosRedes extends Informatico{
         $this->experienciaRedes=5;
     }
     public function auditarRedes(){
-        return "auditanto las redes";
+        return "auditanto redes";
 
     }
 
