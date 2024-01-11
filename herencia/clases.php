@@ -8,13 +8,6 @@ class Persona
     public $altura;
     public $edad;
 
-    
-
-   
-   
-
-
-
     /**
      * Get the value of edad
      */ 
@@ -96,14 +89,14 @@ class Persona
     }
 
     public function hablar (){
-        return "hablando";
+        return "Estoy hablando";
     }
 
     public function caminar (){
-        return "caminando";
+        return "Estoy caminando";
     }
 }
-//HEREDA PERSONA
+//HEREDA PERSONA******************************************************************************************
 class Informatico extends Persona{
     public $lenguajes;
     public $experienciaProg;
@@ -117,7 +110,7 @@ class Informatico extends Persona{
         return $this->lenguajes;
     }
     public function programar(){
-        return "programar";
+        return "Programar, programar y programar";
     }
 
 
@@ -148,15 +141,16 @@ class TecnicosRedes extends Informatico{
     public $experienciaRedes;
 
     public function __construct(){    
-        /******
-         * Si hay un constructor en HIJO, no heredera lo del constructor del padre, para que lo haga
+        /**********************************************
+         * Si hay un constructor en HIJO, no heredera lo del constructor del padre (set de valores en constructor y demás), para que lo haga
          * usaremos parent::   */
         parent::__construct();
+        //Y podemos añadir más cosas al constructor
         $this->testearRed="experto";
         $this->experienciaRedes=5;
     }
     public function auditarRedes(){
-        return "auditanto redes";
+        return "Auditanto redes";
 
     }
 
