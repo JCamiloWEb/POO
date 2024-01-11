@@ -1,18 +1,18 @@
 <?php 
 
 //CLASES
-//definir
+//Definir
 class Coche{
-    //atributos o propiedades
+    //Atributos o Propiedades ********************************
     public $color="red";
     public $modelo="aventador";
     public $velocidad=300;
     public $marca="ferrari";
     public $plazas=3;
 
-    //métodos()
+    //Métodos() *******************************
     public function getColor(){
-       
+       //this: busca en esta clase la propiedad o método 
         return $this->color;
 
     }
@@ -34,15 +34,20 @@ class Coche{
         return $this->velocidad;
 
     }
+    public function setModelo($modelo){
+        $this->modelo=$modelo;
+    }
 //Fin clase
 }
 
-//instanciar
+//Instanciar ********************************************
 $coche=new Coche();
-//usar método
-echo $coche->velocidad;
+$coche->setModelo("Barbie");
+var_dump($coche) . "<br>";
+//Acceder al método o propiedad (->)
+echo $coche->velocidad."<br>";
 $coche->setColor("amarillo").' <br>';
-echo "el color del coche es: ".$coche->getColor();
+echo "El color del coche es: ".$coche->getColor() . "<br>";
 
 $coche->acelerar();
 $coche->acelerar();
@@ -50,6 +55,12 @@ $coche->acelerar();
 $coche->acelerar();
 
 $coche->frenar();
-echo "velocidad es:".$coche->getVelocidad();
+echo "La velocidad del coche es: ".$coche->getVelocidad();
+
+
+$coche2 =new Coche();
+$coche2->setColor("violeta");
+$coche2->setModelo($coche->modelo) . "<br>";
+var_dump($coche2);
 
 ?>
