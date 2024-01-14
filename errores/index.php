@@ -5,6 +5,8 @@ try {
     if(isset($_GET['id'])){
         echo "<h1>El parámetro es: {$_GET['id']}</h1>"; 
         //http://localhost/udephp/PHP%20Lenguaje/PHP%20POO/errores/?id=2
+        //Doble variable: http://localhost/udephp/PHP%20Lenguaje/PHP%20POO/errores/?id=2&cod=3
+
 
     }else{
         throw new Exception("Faltan parámetros por la URL");
