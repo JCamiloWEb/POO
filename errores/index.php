@@ -7,7 +7,6 @@ try {
         //http://localhost/udephp/PHP%20Lenguaje/PHP%20POO/errores/?id=2
         //Doble variable: http://localhost/udephp/PHP%20Lenguaje/PHP%20POO/errores/?id=2&cod=3
 
-
     }else{
         throw new Exception("Faltan parámetros por la URL");
     }
