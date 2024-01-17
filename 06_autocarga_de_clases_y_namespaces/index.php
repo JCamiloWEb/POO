@@ -4,7 +4,7 @@
 // require_once "clases/categoria.php";
 // require_once "clases/entrada.php";
 
-//AUTOLOAD ******************************************** 
+//AUTOLOAD ******************************************** ******************************************************
 //Hacer que un archivo nos haga el include automáticamente
 
 require_once "autoload.php";
@@ -13,7 +13,7 @@ $usu=new Usuario();
 echo $usu->nombre . "<br>";
 echo $usu->email;
 */
-//ESPACIOS DE NOMBRES Y PAQUETES********************************** Se usa para la organización
+//ESPACIOS DE NOMBRES Y PAQUETES********************************** Se usa para la organización***********************
 // use MisClases\Usuario;
 // use MisClases\Categoria;
 // use MisClases\Entrada;
@@ -35,8 +35,25 @@ class Principal{
         $this->usu=new Usuario();
         $this->entrada=new Entrada();
     }
+    public function prueba(){
+        
+    }
+//CONSTANTES PARA ACCEDER A INFORMACIÓN************************************************************
+    public function informacion(){
+        echo __CLASS__ . "<br>";
+        echo __METHOD__ . "<br>";
+        echo __FILE__ . "<br>";
+        echo __NAMESPACE__ . "<br>"; //Si lo hubiera
+
+    }
+
+
 }
+
+
 $principal= new Principal();
+$principal->informacion();
+
 var_dump($principal->usu);
 echo "<br>";
 $usu=new UsuarioAdmin(); 
@@ -45,7 +62,24 @@ $usu=new UsuarioAdmin();
 //Tendría que hacerlo así use PanelAdministrador\Usuario as UsuarioAdmin;
 var_dump($usu);
 
+//COMPROBAR SI EXISTE UNA CLASE************************************************************************
+//Se utiliza la función class_exists
+//Con un @, esconde los warnings
+$clase= @class_exists("MisClases\Usuario"); //No se pueden comprobar alias, para hacerlo: PanelAdministrador\Usuario
+if($clase){
+    echo "<h1>La clase Sí existe</h1>";
+}else{
 
+    echo "<h1>La clase Sí existe</h1>";
 
+}
+
+//COMPROBAR SI EXISTE UN MÉTODO ***************************************************************************
+//Se utiliza la función get_class_methods
+$secundario=new Principal();
+$metodos=get_class_methods($secundario);
+
+$busqueda=array_search("__construct", $metodos);
+var_dump($busqueda); //Me tira el indice del elemento, en este caso 0 pues es el primer método
 
 ?>
