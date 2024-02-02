@@ -47,9 +47,7 @@ class Principal{
 
     }
 
-
 }
-
 
 $principal= new Principal();
 $principal->informacion();
