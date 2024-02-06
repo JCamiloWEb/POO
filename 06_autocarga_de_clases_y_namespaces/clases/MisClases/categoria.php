@@ -1,5 +1,6 @@
 <?php 
-namespace MisClases;
+namespace MisClases;//Establecemos el nombre del paquete en todas las clases que queramos
+//Seguidamente haremos una carpete 'paquete' y meteremos las clases
 class Categoria{
     public $nombre;
     public $descripcion;
