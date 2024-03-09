@@ -68,14 +68,14 @@ if($clase){
     echo "<h1>La clase Sí existe</h1>";
 }else{
 
-    echo "<h1>La clase Sí existe</h1>";
+    echo "<h1>La clase NO existe</h1>";
 
 }
 
 //COMPROBAR SI EXISTE UN MÉTODO ***************************************************************************
 //Se utiliza la función get_class_methods
 $secundario=new Principal();
-$metodos=get_class_methods($secundario);
+$metodos=get_class_methods($secundario); //Consigue todos los métodos del objeto
 
 $busqueda=array_search("__construct", $metodos);
 var_dump($busqueda); //Me tira el indice del elemento, en este caso 0 pues es el primer método
