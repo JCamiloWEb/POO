@@ -56,9 +56,9 @@ class Coche{
         //Nunca hay que imprimir datos dentro de una misma función, a no ser que sea un helper de una vista 
 
         $info = "<h1>información del coche</h1>";
-        $info.="modelo: ".$coche->modelo.'<br>';
-        $info.="color: ".$coche->color.'<br>';
-        $info.="velocidad: ".$coche->velocidad.'<br>';
+        $info.="Modelo: ".$coche->modelo.'<br>';
+        $info.="Color: ".$coche->color.'<br>';
+        $info.="Velocidad: ".$coche->velocidad.'<br>';
 
         return $info;
 

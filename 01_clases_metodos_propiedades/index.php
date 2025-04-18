@@ -55,7 +55,7 @@ $coche->acelerar();
 $coche->acelerar();
 
 $coche->frenar();
-echo "La velocidad del coche es: ".$coche->getVelocidad();
+echo "La velocidad del coche es: ".$coche->getVelocidad(). "<br>";
 
 
 $coche2 =new Coche();
