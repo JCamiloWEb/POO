@@ -28,7 +28,7 @@ class Usuario{
 
 $user = new Usuario();
 //Daría fallo sin el método toString echo $user; PUES ESTAMOS IMPRIMIENDO CON ECHO
-echo $user . "<br>";
+echo $user . "<br>"; //Con el método toString no da fallo
 echo $user->email;
 
 

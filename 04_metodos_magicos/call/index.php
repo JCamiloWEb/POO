@@ -33,6 +33,8 @@ class Persona
 
 
             return $this->$nombre_metodo;
+
+            
         } else {
             return "El método no existe";
         }
