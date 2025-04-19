@@ -1,7 +1,8 @@
 
 
-<?php  
-class Coche{
+<?php
+class Coche
+{
     //Atributos o propiedades. Con el constructor no se utiliza la definición de los atributos para asignar valores
     //PUBLIC: podemos acceder desde cualquier lugar, dentro de clase actual, dentro de clases que hereden esta clase o fuera de la clase
     public $color;
@@ -14,56 +15,66 @@ class Coche{
 
     //Métodos()
     //Constructor : método __construct()  Nunca devuelve ningún dato, simplemente se encarga de setear información en las propiedades*****
-    public function __construct($color, $modelo, $velocidad, $marca, $plazas){//Siempre tiene que ser public y es el que se ejecuta primero
+    public function __construct($color, $modelo, $velocidad, $marca, $plazas)
+    { //Siempre tiene que ser public y es el que se ejecuta primero
         //También podría pasarle parámetros al constructor $this->color="Rojo";
         //Para asignar valores a propiedades es labor de los métodos, al instanciar o del constructor
-        $this->color=$color;
-        $this->modelo=$modelo;
-        $this->velocidad=$velocidad;
-        $this->marca=$marca;
-        $this->plazas=$plazas;
+        $this->color = $color;
+        $this->modelo = $modelo;
+        $this->velocidad = $velocidad;
+        $this->marca = $marca;
+        $this->plazas = $plazas;
     }
-    public function getColor(){
-       
+    public function getColor()
+    {
+
         return $this->color;
-
     }
-    public function setModelo($modelo){
-        $this->modelo=$modelo;
-    }
-
-    public function setColor($color){
-        $this->color =$color;
+    public function setModelo($modelo)
+    {
+        $this->modelo = $modelo;
     }
 
-    public function acelerar(){
+    public function setColor($color)
+    {
+        $this->color = $color;
+    }
+
+    public function acelerar()
+    {
         $this->velocidad++;
     }
 
-    public function frenar(){
+    public function frenar()
+    {
         $this->velocidad--;
-
     }
 
-    public function getVelocidad(){
+    public function getVelocidad()
+    {
         return $this->velocidad;
-
     }
-//Método ayuda para ver objetos en lugar de var_dump por ejemplo  *************************************
-    public function mostrarInfo(Coche $coche){ 
+    //Método ayuda para ver objetos en lugar de var_dump por ejemplo  *************************************
+    public function mostrarInfo(Coche $coche)
+    {
         //Es conveniente meter el tipado, en este caso objeto tipo coche. Se hace para exigir que el tipo de dato sea de tipo Coche
 
         //Nunca hay que imprimir datos dentro de una misma función, a no ser que sea un helper de una vista 
+       
+        //En el caso de no pasar poner explicito el objeto tipo Coche: if (is_object($coche) && !empty($coche)) {
 
-        $info = "<h1>información del coche</h1>";
-        $info.="Modelo: ".$coche->modelo.'<br>';
-        $info.="Color: ".$coche->color.'<br>';
-        $info.="Velocidad: ".$coche->velocidad.'<br>';
+
+
+            $info = "<h1>información del coche</h1>";
+            $info .= "Modelo: " . $coche->modelo . '<br>';
+            $info .= "Color: " . $coche->color . '<br>';
+            $info .= "Velocidad: " . $coche->velocidad . '<br>';
+        //} else {
+           // $info = "Tu dato es este: $coche ";
+        //}
 
         return $info;
-
-
     }
-//Fin clase
+    //Fin clase
 }
 ?>

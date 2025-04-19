@@ -87,7 +87,7 @@ class Persona
 
         return $this;
     }
-
+//MÉTODOS PERSONA*****************************
     public function hablar (){
         return "Estoy hablando";
     }

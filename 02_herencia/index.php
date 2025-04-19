@@ -4,7 +4,7 @@
 
 require_once "clases.php";
 $persona =new Persona();
-//var_dump($persona);
+var_dump($persona);
 
 $informatico =new Informatico();
 $informatico->sabeLenguajes($informatico->lenguajes." php");
