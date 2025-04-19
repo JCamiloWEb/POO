@@ -40,9 +40,9 @@ class Principal{
     }
 //CONSTANTES PARA ACCEDER A INFORMACIÓN************************************************************
     public function informacion(){
-        echo __CLASS__ . "<br>";
-        echo __METHOD__ . "<br>";
-        echo __FILE__ . "<br>";
+        echo __CLASS__ . "<br>"; //Clase en la que estoy
+        echo __METHOD__ . "<br>"; //Método en el que estoy
+        echo __FILE__ . "<br>";//Ruta del archivo
         echo __NAMESPACE__ . "<br>"; //Si lo hubiera
 
     }
