@@ -52,8 +52,8 @@ class Usuario{
 $usuario= new Usuario();
 //********************************************* */
 //Como pasaba con los métodos estáticos no funciona accediendo con (->)
-echo Usuario::URL_COMPLETA . "<br>";
-echo $usuario::URL_COMPLETA . "<br>";
+echo Usuario::URL_COMPLETA . "<br>";//CON LA CLASE
+echo $usuario::URL_COMPLETA . "<br>";//CON EL OBJETO
 var_dump($usuario);
 
 ?>
